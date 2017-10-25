@@ -152,7 +152,7 @@ module Players
         end
       end
 
-      puts "#{move_hash}"
+      # puts "#{move_hash}"
       #find the biggest value in move_hash
       move_array = []
       highest_value = 0
@@ -169,13 +169,12 @@ module Players
         end
       end
 
-      puts "#{move_array}"
+      # puts "#{move_array}"
       #make some sense of move_array
       corner_array = []
       if move_array.size == 0
         return nil
       elsif move_array.size == 1
-        puts "test 1"
         return move_array[0]
       else
         #prioritize corners 1, 3, 7, 9
@@ -193,11 +192,8 @@ module Players
         end
 
         if corner_array.size > 0
-          puts "test 2"
-          puts "#{corner_array.size}"
           return corner_array[0]
         else
-          puts "test 3"
           return move_array[0]
         end
       end
