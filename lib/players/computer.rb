@@ -46,8 +46,6 @@ module Players
       move
     end
 
-
-
     #looks for a place that will win the game that turn
     #returns the winning move, otherwise nil
     def winning_move(board)
