@@ -15,29 +15,25 @@ module Players
     def move(board)
       #take mid as soon as possible
       if board.valid_move?("5")
-      puts "mid"
-      # puts "comp 5"
+      # puts "mid"
         return "5"
       end
 
       move = winning_move(board)
       if move
-      puts "winning_move"
-      # puts "comp #{move}"
+      # puts "winning_move"
         return move
       end
 
       move = stop_opponent_move(board)
       if move
-      puts "stop_opponent_move"
-      # puts "comp #{move}"
+      # puts "stop_opponent_move"
         return move
       end
 
       move = potential_win(board)
       if move
-      puts "potential_win"
-      # puts "comp #{move}"
+      # puts "potential_win"
         return move
       end
 
@@ -46,8 +42,7 @@ module Players
       while !board.valid_move?(move)
         move = (((rand*8).round)+1).to_s
       end
-      puts "random_move"
-      # puts "comp #{move}"
+      # puts "random_move"
       move
     end
 
