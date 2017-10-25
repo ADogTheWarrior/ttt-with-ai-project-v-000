@@ -16,28 +16,28 @@ module Players
       #take mid as soon as possible
       if board.valid_move?("5")
       puts "mid"
-      puts "comp 5"
+      # puts "comp 5"
         return "5"
       end
 
       move = winning_move(board)
       if move
       puts "winning_move"
-      puts "comp #{move}"
+      # puts "comp #{move}"
         return move
       end
 
       move = stop_opponent_move(board)
       if move
       puts "stop_opponent_move"
-      puts "comp #{move}"
+      # puts "comp #{move}"
         return move
       end
 
       move = potential_win(board)
       if move
       puts "potential_win"
-      puts "comp #{move}"
+      # puts "comp #{move}"
         return move
       end
 
@@ -47,7 +47,7 @@ module Players
         move = (((rand*8).round)+1).to_s
       end
       puts "random_move"
-      puts "comp #{move}"
+      # puts "comp #{move}"
       move
     end
 
@@ -157,7 +157,7 @@ module Players
       move_array = []
       highest_value = 0
       move_hash.each do |key, value|
-        # if 
+        # if
         if value > highest_value
           move_array = []
           move_array << key
